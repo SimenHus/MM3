@@ -11,6 +11,7 @@ t, s = symbols('t s')
 #sin(t) skrives sin(t)
 #pi skrives pi
 
+
 #ENDRE TIL DINE VERDIER HER
 #rt =np.array([x, y, z])
 rt = np.array([t**2/2, 1/3*(sqrt(2*t+1))**3, 0])
@@ -49,6 +50,7 @@ punkt = subValue(rt, t, ts_value)
 T = np.array([x/vlen for x in vsubArr])
 
 K = aXvlen/vlen**3
+Kr = "Ikke gjort enda!"
 
 #KRUMNINGSRADIUS TBC
 
@@ -56,6 +58,7 @@ K = aXvlen/vlen**3
 print("Punkt på kurven: {}".format(punkt))
 print("T: {}".format(T))
 print("K: {}".format(K))
+print("Kr: {}".format(Kr))
 
 
 print("Press enter to exit...")
