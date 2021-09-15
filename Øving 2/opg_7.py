@@ -8,6 +8,8 @@ t, s = symbols('t s')
 #Kvadratrot skrives på formen: sqrt(...)
 #Vanlig deling skrives på formen: x/y
 #Eksponenter skrives på formen: x**y (2**2 = 2^2 = 4)
+#sin(t) skrives sin(t)
+#pi skrives pi
 
 #ENDRE TIL DINE VERDIER HER
 #rt =np.array([x, y, z])

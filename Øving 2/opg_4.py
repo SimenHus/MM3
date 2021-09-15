@@ -3,6 +3,8 @@ from sympy import *
 
 t = symbols('t')
 
+
+
 #Nyttig info
 #Kvadratrot skrives på formen: sqrt(...)
 #Vanlig deling skrives på formen: x/y
@@ -12,21 +14,26 @@ t = symbols('t')
 
 #ENDRE DINE VERDIER HER
 #x(t) = ...
-xt = 2*t + 0.5
+xt = 3*cos(t)
 #y(t) = ...
-yt = 4*t - 2
+yt = 3*sin(t)
 #a < t < b
 a = 0
-b = 1
+b = pi
+#delta (massetetthet) = ...
+d = 1
 
-#---------------------------------
+
+#--------------------------------
 #Beregninger
+f = d * sqrt((diff(xt, t))**2 + (diff(yt, t))**2)
+m = integrate(f, (t, a, b))
+x = 1/m*integrate(f*xt, (t, a, b))
+y = 1/m*integrate(yt*f, (t, a, b))
 
-v = np.array([diff(xt, t), diff(yt, t)])
-vlen = sqrt(v[0]**2 + v[1]**2)
-L = integrate(vlen, (t, a, b))
-
-print("L: {}".format(L))
+print("m: {}".format(m))
+print("x: {}".format(x))
+print("y: {}".format(y))
 
 print("Press enter to exit...")
 input()

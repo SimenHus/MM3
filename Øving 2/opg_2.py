@@ -12,20 +12,21 @@ t = symbols('t')
 
 #ENDRE DINE VERDIER HER
 #x(t) = ...
-xt = 2*t + 0.5
+xt = 4*t**2 + 2
 #y(t) = ...
-yt = 4*t - 2
+yt = 3*t**3 + 5
 #a < t < b
 a = 0
-b = 1
+b = 3
 
 #---------------------------------
 #Beregninger
-
+#Integrand = vlen
 v = np.array([diff(xt, t), diff(yt, t)])
 vlen = sqrt(v[0]**2 + v[1]**2)
 L = integrate(vlen, (t, a, b))
 
+print("Integrand f(t): {}".format(vlen))
 print("L: {}".format(L))
 
 print("Press enter to exit...")

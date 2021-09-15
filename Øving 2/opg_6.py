@@ -1,6 +1,13 @@
 import numpy as np
 import sympy as sp
 
+#Nyttig info
+#Kvadratrot skrives på formen: sqrt(...)
+#Vanlig deling skrives på formen: x/y
+#Eksponenter skrives på formen: x**y (2**2 = 2^2 = 4)
+#sin(t) skrives sin(t)
+#pi skrives pi
+
 #ENDRE DINE VERDIER HER
 v = np.array([2, -3, 0]) #Hastighetsvektor
 a = np.array([0, 3, 3]) #Akselerasjonsvektor
