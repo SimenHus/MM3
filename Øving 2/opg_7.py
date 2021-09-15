@@ -50,7 +50,7 @@ punkt = subValue(rt, t, ts_value)
 T = np.array([x/vlen for x in vsubArr])
 
 K = aXvlen/vlen**3
-Kr = "Ikke gjort enda!"
+Kr = 1/K
 
 #KRUMNINGSRADIUS TBC
 
