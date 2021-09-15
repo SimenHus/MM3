@@ -7,3 +7,4 @@ De fleste script bruker bibliotekene "Numpy" og "Sympy" som må installeres:
   * Skriv: pip install sympy
   * Profit
  
+For å få dine svar, skal du kun gå inn i koden og fylle inn dine verdier øverst i koden. Deretter kan du kjøre programmet og få svarene du trenger
