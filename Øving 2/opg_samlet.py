@@ -1,6 +1,88 @@
 import numpy as np
 from sympy import *
 
+t, s = symbols('t s')
+opgAntall = 7
+
+#---------------------------------
+#ENDRE DINE VERDIER HER
+
+#Oppgave 1
+#x(t) = ...
+xt = 2*t + 0.5
+#y(t) = ...
+yt = 4*t - 2
+#a < t < b
+a = 0
+b = 1
+
+opg1Info = [xt, yt, a, b]
+
+#Oppgave 2
+#x(t) = ...
+xt = 4*t**2 + 2
+#y(t) = ...
+yt = 3*t**3 + 5
+#a < t < b
+a = 0
+b = 3
+
+opg2Info = [xt, yt, a, b]
+
+#Opggave 3
+#x(t) = ...
+xt = 3*sin(t)
+#y(t) = ...
+yt = 3*cos(t)
+#z(t) = ...
+zt = 2*t
+#a < t < b
+a = 0
+b = 4
+opg3Info = [xt, yt, zt, a, b]
+
+#Oppgave 4
+#x(t) = ...
+xt = 3*cos(t)
+#y(t) = ...
+yt = 3*sin(t)
+#a < t < b
+a = 0
+b = pi
+#delta (massetetthet) = ...
+d = 1
+
+opg4Info = [xt, yt, a, b, d]
+
+#Oppgave 5 er litt spesiell, så måtte endre noe
+t = symbols('t', positive = True, real = True)
+#Opggave 5
+#r(t) = [x, y, z]
+rt = np.array([t**3, 9*t**2, 9*t**2])
+#t>a
+a = 0
+
+opg5Info = [rt, a]
+
+#Endrer tilbake
+t = symbols('t')
+#Oppgave 6
+v = np.array([2, -3, 0]) #Hastighetsvektor
+a = np.array([0, 3, 3]) #Akselerasjonsvektor
+r = np.array([1, 0, 1]) #Rykk vektor
+opg6Info = [v, a, r]
+
+#Oppgave 7
+#rt =np.array([x, y, z])
+rt = np.array([t**2/2, 1/3*(sqrt(2*t+1))**3, 0])
+#s(t) = ...
+st = t**2/2 + t
+#t(s) = ...
+ts = sqrt(2*s+1) - 1
+opg7Info = [rt, st, ts]
+
+
+
 #----------------------- Funksjoner ---------------------
 
 
@@ -50,19 +132,10 @@ def Torsjon(v, a, r):
 #pi skrives pi
 
 #----------------------- Oppgave 1 ---------------------
-print("Oppgave 1:")
-def opg1():
+def opg1(myArr):
+    print("Oppgave 1:")
     t = symbols('t')
-
-    #ENDRE DINE VERDIER HER
-    #x(t) = ...
-    xt = 2*t + 0.5
-    #y(t) = ...
-    yt = 4*t - 2
-    #a < t < b
-    a = 0
-    b = 1
-
+    xt, yt, a, b = myArr
     #---------------------------------
     #Beregninger
     r = [xt, yt]
@@ -71,22 +144,17 @@ def opg1():
     L = integrate(vlen, (t, a, b))
 
     print("L: {}".format(L))
-opg1()
+
+
 
 #----------------------- Oppgave 2 ---------------------
 
-print("\n\nOppgave 2:")
-def opg2():
+
+def opg2(myArr):
+    print("\n\nOppgave 2:")
     t = symbols('t')
 
-    #ENDRE DINE VERDIER HER
-    #x(t) = ...
-    xt = 4*t**2 + 2
-    #y(t) = ...
-    yt = 3*t**3 + 5
-    #a < t < b
-    a = 0
-    b = 3
+    xt, yt, a, b = myArr
 
     #---------------------------------
     #Beregninger
@@ -98,22 +166,15 @@ def opg2():
 
     print("Integrand f(t): {}".format(vlen))
     print("L: {}".format(L))
-opg2()
+
 
 #----------------------- Oppgave 3 ---------------------
-print("\n\nOppgave 3:")
-def opg3():
+
+def opg3(myArr):
+    print("\n\nOppgave 3:")
     t = symbols('t')
-    #ENDRE DINE VERDIER HER
-    #x(t) = ...
-    xt = 3*sin(t)
-    #y(t) = ...
-    yt = 3*cos(t)
-    #z(t) = ...
-    zt = 2*t
-    #a < t < b
-    a = 0
-    b = 4
+
+    xt, yt, zt, a, b = myArr
 
     #---------------------------------
     #Beregninger
@@ -125,23 +186,13 @@ def opg3():
 
     print("Integrand f(t): {}".format(vlen))
     print("L: {}".format(L))
-opg3()
 #----------------------- Oppgave 4 ---------------------
-print("\n\nOppgave 4:")
-def opg4():
+
+def opg4(myArr):
+    print("\n\nOppgave 4:")
     t = symbols('t')
 
-    #ENDRE DINE VERDIER HER
-    #x(t) = ...
-    xt = 3*cos(t)
-    #y(t) = ...
-    yt = 3*sin(t)
-    #a < t < b
-    a = 0
-    b = pi
-    #delta (massetetthet) = ...
-    d = 1
-
+    xt, yt, a, b, d = myArr
 
     #--------------------------------
     #Beregninger
@@ -153,26 +204,19 @@ def opg4():
     print("m: {}".format(m))
     print("x: {}".format(x))
     print("y: {}".format(y))
-opg4()
 
 #----------------------- Oppgave 5 ---------------------
-print("\n\nOppgave 5:")
-
-def opg5():
+def opg5(myArr):
+    print("\n\nOppgave 5:")
     s, t, tau = symbols('s t tau', positive = True, real = True)
-
-    #ENDRE DINE VERDIER HER
-    #r(t) = [x, y, z]
-    rt = np.array([tau**3, 9*tau**2, 9*tau**2])
-    #t>a
-    a = 0
+    rt, a = myArr
 
     #--------------------------------
     #Beregninger
-    v = diffV(rt, tau)
+    v = diffV(rt, t)
     vlen = absV(v)
-    st = powsimp(integrate(vlen, (tau, a, t)))
-    ts = solve(st - s, t, rational = False, force = True)
+    st = powsimp(integrate(vlen, (t, a, tau)))
+    ts = solve(st - s, tau, rational = False, force = True)
 
     ts_ans = sqrt(factor(ts[0]**2))
 
@@ -183,17 +227,12 @@ def opg5():
     For eksempel sqrt((s**2 + 864*sqrt(2)*s + 373248)**(1/3) - 72) ga meg feil svar,
     men jeg fikk riktig ved å bruke første kvadratsetning på (s**2 + 864*sqrt(2)*s + 373248).
     Da ble svaret sqrt((s+373248^(1/2))^(2/3)-72) som var riktig""")
-opg5()
 #----------------------- Oppgave 6 ---------------------
-print("\n\nOppgave 6:")
 
-def opg6():
-    #ENDRE DINE VERDIER HER
-    v = np.array([2, -3, 0]) #Hastighetsvektor
-    a = np.array([0, 3, 3]) #Akselerasjonsvektor
-    r = np.array([1, 0, 1]) #Rykk vektor
+def opg6(myArr):
+    print("\n\nOppgave 6:")
 
-
+    v, a, r = myArr
     #------------------------------------------------------------------
     #Mellomregninger
     vlen = absV(v)
@@ -213,20 +252,14 @@ def opg6():
     print("N: {}".format(N))
     print("K: {}".format(K))
     print("t: {}".format(t))
-opg6()
 #----------------------- Oppgave 7 ---------------------
-print("\n\nOppgave 7:")
-def opg7():
+
+def opg7(myArr):
+    print("\n\nOppgave 7:")
     s_value = 12
     t, s = symbols('t s')
 
-    #ENDRE TIL DINE VERDIER HER
-    #rt =np.array([x, y, z])
-    rt = np.array([t**2/2, 1/3*(sqrt(2*t+1))**3, 0])
-    #s(t) = ...
-    st = t**2/2 + t
-    #t(s) = ...
-    ts = sqrt(2*s+1) - 1
+    rt, st, ts = myArr
 
     #------------------------------------------------------------------
     #Funksjoner
@@ -267,6 +300,15 @@ def opg7():
     print("T: {}".format(T))
     print("K: {}".format(K))
     print("Kr: {}".format(Kr))
-opg7()
+
+opg1(opg1Info)
+opg2(opg2Info)
+opg3(opg3Info)
+opg4(opg4Info)
+opg5(opg5Info)
+opg6(opg6Info)
+opg7(opg7Info)
+
+
 print("\n\nPress enter to exit...")
 input()
