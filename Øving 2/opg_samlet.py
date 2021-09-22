@@ -79,7 +79,9 @@ rt = np.array([t**2/2, 1/3*(sqrt(2*t+1))**3, 0])
 st = t**2/2 + t
 #t(s) = ...
 ts = sqrt(2*s+1) - 1
-opg7Info = [rt, st, ts]
+#s = ...
+s = 12
+opg7Info = [rt, st, ts, s]
 
 
 
@@ -219,7 +221,8 @@ def opg5(myArr):
     ts = solve(st - s, tau, rational = False, force = True)
 
     ts_ans = sqrt(factor(ts[0]**2))
-
+    
+    print("Bytt ut tau med t når du skriver svaret :)")
     print("s(t) = {}".format(st))
     print("t(s) = {}".format(ts_ans))
     print("""Det kan være at t(s) ikke gir riktig svar.
@@ -256,10 +259,9 @@ def opg6(myArr):
 
 def opg7(myArr):
     print("\n\nOppgave 7:")
-    s_value = 12
     t, s = symbols('t s')
 
-    rt, st, ts = myArr
+    rt, st, ts, s_value = myArr
 
     #------------------------------------------------------------------
     #Funksjoner
