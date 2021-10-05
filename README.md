@@ -7,5 +7,6 @@ De fleste script bruker bibliotekene "Numpy" og "Sympy" som må installeres:
   * Skriv: pip install sympy
   * Profit
  
-For å få dine svar, skal du kun gå inn i koden og fylle inn dine verdier øverst i koden. Deretter kan du kjøre programmet og få svarene du trenger
+For å få dine svar, skal du kun gå inn i koden og fylle inn dine verdier øverst i koden. Deretter kan du kjøre programmet og få svarene du trenger.
+Scriptene er designet til å kunne åpnes ved å dobbeltrykke python-fila til å kjøres, men fungerer via texteditor også (f. eks. Spyder eller VisualStudioCode).
 Hvis noe ikke funker eller kunne vært bedre er det bare å sende meg en melding, jeg hjelper hvis jeg kan :)
