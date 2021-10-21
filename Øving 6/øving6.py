@@ -159,7 +159,7 @@ def opg6(myArr):
     print("b2 = {}".format(a3[0]))
 
 #Oppgave 7
-def opg7(myArr):
+def opg7():
     print("\n\n\n\n\n\n\n\nOppgave 7:")
     print("Se teoribiten, sorry")
 
@@ -219,7 +219,7 @@ if __name__ == '__main__':
     opg4(arr4)
     opg5(arr5)
     opg6(arr6)
-    opg7(arr7)
+    opg7()
     opg8(arr8)
 
     print("Press enter to exit...")
