@@ -184,8 +184,8 @@ def opg6(myArr):
     flateOvre = solve(np.dot(np.subtract((x, y, z), punktFlateOvre[2]), normalOvre), y)
     flateNedre = solve(np.dot(np.subtract((x, y, z), punktFlateNedre[2]), normalNedre), y)
 
-    a1 = flateOvre[0]
-    b1 = flateNedre[0]
+    a1 = flateNedre[0]
+    b1 = flateOvre[0]
 
     a2 = nsimplify(Topunktsformel((-a[0], a[2]), (b[0], b[2]), x)).subs(y, z)
     b2 = nsimplify(Topunktsformel((a[0], a[2]), (b[0], b[2]), x)).subs(y, z)
