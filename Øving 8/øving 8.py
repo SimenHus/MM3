@@ -217,7 +217,7 @@ if __name__ == '__main__':
     opg8(arr8)
 
     print("Press enter to exit...")
-    #input()
+    input()
 
 
 #Funksjonsformat
