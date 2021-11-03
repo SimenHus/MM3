@@ -1,5 +1,6 @@
 # MM3
 Samling av python script og løsningsforslag med teori for øvinger i MM3
+
 Scriptene er skrevet i Python 3.9
 De fleste script bruker bibliotekene "Numpy" og "Sympy" som må installeres:
   * Åpne command prompt
