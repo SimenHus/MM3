@@ -99,7 +99,7 @@ def opg2(myArr):
     fluksTopp = pi*rad**2*+F[2].subs(z, h)
     fluksBunn = pi*rad**2*-F[2].subs(z, 0)
     integrand = np.dot(F, Nside).subs({x: rad*cos(theta), y: rad*sin(theta)})
-    fluksSide = integrate(integrand*rad, (z, 0, 6), (theta, 0, 2*pi))
+    fluksSide = integrate(integrand*rad, (z, 0, h), (theta, 0, 2*pi))
 
     print("Resultater:")
     print("N1 = [0, 0, 1]")
