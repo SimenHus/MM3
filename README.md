@@ -1,4 +1,9 @@
 # MM3
+
+Siden vi nå er i eksamenstiden kommer jeg ikke til å lage løsningsforslag til øving 10 og 11. Øving 12 er obligatorisk og jeg skal legge ut dokument med informasjon om hvordan oppgaven kan løses. Beklager hvis dette skaper problemer for noen, men håper det løser seg :)
+
+----------------------------------------------------------------------------------------------------
+
 Samling av python script og løsningsforslag med teori for øvinger i MM3
 
 Scriptene er skrevet i Python 3.9
