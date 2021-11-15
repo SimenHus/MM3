@@ -2,6 +2,8 @@
 
 Siden vi nå er i eksamenstiden kommer jeg ikke til å lage løsningsforslag til øving 10 og 11. Øving 12 er obligatorisk og jeg skal legge ut dokument med informasjon om hvordan oppgaven kan løses. Beklager hvis dette skaper problemer for noen, men håper det løser seg :)
 
+P.S: Minner om å ikke direkte kopiere kode, men skrive den om. Ønsker ikke at alle slår ut på plagiat
+
 ----------------------------------------------------------------------------------------------------
 
 Samling av python script og løsningsforslag med teori for øvinger i MM3
