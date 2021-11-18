@@ -73,3 +73,21 @@ def OppgaveC():
     u, v = f([xp, yp], 0)
     ax.quiver(xp, yp, u, v)  # Lager vektorpiler
     #plt.show()  # Viser figuren vi lagde
+    
+    
+
+def OppgaveD():
+    x, y, L, M, t = sp.symbols("x y L M t") #Definerer x, y, L, M  og t som symboler uten verdier
+
+    r = np.array([t*x, t*y])  # r = (x, y)
+    r1 = [r[0] + 1, r[1]]  # r1 = r + (1, 0) = (x + 1, y)
+    r2 = [r[0] - 1, r[1]]  # r2 = r - (1, 0) = (x - 1, y)
+    r1Len = sp.sqrt(r1[0]**2 + r1[1]**2)  # |r1|
+    r2Len = sp.sqrt(r2[0]**2 + r2[1]**2)  # |r2|
+    r1Hatt = [k/r1Len for k in r1]  # r1Hatt = r1/|r1|
+    r2Hatt = [k/r2Len for k in r2]  # r2Hatt = r2/|r1|
+    F = [L/r1Len*r1Hatt[i] - M/r2Len*r2Hatt[i] for i in range(2) ] # Setter inn i v
+
+    integrand = sum([F[i]*sp.diff(r[i], t) for i in range(2)])
+    phi = sp.simplify(sp.integrate(integrand, (t, 0, 1)))
+    print(phi)
