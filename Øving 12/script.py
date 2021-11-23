@@ -92,3 +92,42 @@ def OppgaveD():
     integrand = sum([F[i]*sp.diff(r[i], t) for i in range(2)])
     phi = sp.simplify(sp.integrate(integrand, (t, 0, 1)))
     print(phi)
+
+    
+def OppgaveE():
+    level = [-0.7, 0.5, 2.0, 3.2]
+    L = 3
+    M = 1
+
+    xpoints = np.linspace(-10, 10, 20)  # Danner x-aksen
+    ypoints = np.linspace(-10, 10, 20)   # Danner y-aksen
+    xp, yp = np.meshgrid(xpoints, ypoints)  # Danner et grid med koordinater
+
+    phi = L*np.log2((xp + 1)**2 + yp**2)/2 - M * np.log2((xp-1)**2 + yp**2)/2  # Potensialet
+    zp = phi  # Lager meshgrid som legger til z-verdier
+
+    fig, ax = plt.subplots() #Lager figur
+
+    ax.contour(xp, yp, zp, level)  # Legger nivåkurven til i figuren
+
+    #Kopierer koden fra OppgaveC for å danne integralkurver
+    
+    #Integralkurver [start posisjon, interval]
+    kurve1 = [[-1, 0.5], [0, 10]]
+    kurve2 = [[-1, -0.5], [0, 6]]
+    kurve3 = [[-1.5, -0.5], [0, 3]]
+
+    # Setter intervalet til integralet
+    t1 = np.linspace(kurve1[1][0], kurve1[1][1], 100)
+    t2 = np.linspace(kurve2[1][0], kurve2[1][1], 100)
+    t3 = np.linspace(kurve3[1][0], kurve3[1][1], 100)
+    sol1 = odeint(f, kurve1[0], t1)  # Finner punktene langs integralkurve 1
+    sol2 = odeint(f, kurve2[0], t2)  # Finner punktene langs integralkurve 2
+    sol3 = odeint(f, kurve3[0], t3)  # Finner punktene langs integralkurve 3
+
+    # Legger resultatet til figuren
+    ax.plot(sol1[:, 0], sol1[:, 1], color="red")
+    ax.plot(sol2[:, 0], sol2[:, 1], color="green")
+    ax.plot(sol3[:, 0], sol3[:, 1], color="blue")
+    ax.grid()  # Skrur på et grid i figuren
+    plt.show()
