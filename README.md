@@ -1,8 +1,13 @@
 # MM3
 
+Til dere som tar emnet senere enn Høsten 2021:
+Jeg prøver å fortsatt være tilgjengelig for å svare på spørsmål/issues dere har rundt script/teori.
+Hvis noen har forslag til endringer eller forbedringer er det bare å gi beskjed så kan få oppdatert samlingen :)
+
 ----------------------------------------------------------------------------------------------------
 
 Samling av python script og løsningsforslag med teori for øvinger i MM3 (Høsten 2021)
+Merk: Øving 1 er ikke laget, og 2-3 er kun Python script.
 
 Scriptene er skrevet i Python 3.9
 De fleste script bruker bibliotekene "Numpy" og "Sympy" som må installeres:
