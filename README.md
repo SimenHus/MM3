@@ -2,7 +2,7 @@
 
 Til dere som tar emnet senere enn Høsten 2021:
 Jeg prøver å fortsatt være tilgjengelig for å svare på spørsmål/issues dere har rundt script/teori.
-Hvis noen har forslag til endringer eller forbedringer er det bare å gi beskjed så kan få oppdatert samlingen :)
+Hvis noen har forslag til endringer eller forbedringer er det bare å gi beskjed så kan jeg få oppdatert samlingen :)
 
 ----------------------------------------------------------------------------------------------------
 
